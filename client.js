@@ -15,12 +15,15 @@ const connect = function () {
     // code that does something when the connection is first established
     console.log("Successfully connected to game server");
     conn.write("Name: REM");
+    conn.write("Move: up");
+
   });
 
   // interpret incoming data as text
   conn.setEncoding("utf8");
 
   return conn;
+
 };
 
 console.log("Connecting ...");
